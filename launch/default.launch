@@ -61,9 +61,13 @@
     <arg name="initial_pose_a" value="$(arg initial_pose_a)"/>
   </include>
 
+  <!--  ******* Turtlebot SLAM Controller *******  -->
+  <rosparam command="load" file="$(find turtlebot_slam_controller)/config/default.yaml" ns="turtlebot_slam_controller"/>
+  <node name="turtlebot_slam_controller" pkg="turtlebot_slam_controller" type="turtlebot_slam_controller_node" output="screen"/>
+
   <!--  ******* Turtlebot SLAM Sensor *******  -->
   <rosparam command="load" file="$(find turtlebot_slam_sensor)/config/default.yaml" ns="turtlebot_slam_sensor"/>
-  <node launch-prefix="kitty -e gdb --args" name="turtlebot_slam_sensor" pkg="turtlebot_slam_sensor" type="turtlebot_slam_sensor_node" output="screen"/>
+  <node name="turtlebot_slam_sensor" pkg="turtlebot_slam_sensor" type="turtlebot_slam_sensor_node"/>
   
   <!--  ************ Visualization **************  -->
   <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot_slam_controller)/config/default.rviz"/> -->

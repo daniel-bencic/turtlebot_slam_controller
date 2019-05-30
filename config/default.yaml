@@ -1,0 +1,6 @@
+topic_sub: "/pillar_pos"
+topic_pub: "/cmd_vel"
+queue_size: 1
+base_linear_speed: 0.25
+base_angular_speed: 0.25
+p_factor: 1

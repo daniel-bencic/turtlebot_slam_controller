@@ -1,0 +1,5 @@
+bool move_to_pillar
+---
+bool finished_moving
+---
+turtlebot_slam_sensor/pillar_pos pos

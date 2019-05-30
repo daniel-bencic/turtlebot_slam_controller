@@ -1,5 +1,0 @@
-bool start
----
-bool stop
----
-geometry_msgs/Pose pos
